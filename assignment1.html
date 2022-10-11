@@ -1,14 +1,14 @@
-<!DOCTYPE html> 
-<html> 
-    <head> 
-        <meta charset="utf-8"> 
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
 
-        <title>Alexa Schlein's HCDE 533 Digital Fabrication Page!</title> 
+        <title>Alexa Schlein's HCDE 533 Digital Fabrication Page!</title>
 
         <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
 
-    </head> 
+    </head>
     <body>
         <div class="header">
             <h1>Assignment 1: Laser Cut Press Fit Construction Kit!</h1>
@@ -17,38 +17,40 @@
             <h2> Finished Kit </h2>
             <p> I'm still in progress of cutting my kit, so finished kit pic TBD! For now, here is a picture of the 3D model.
             </p>
-		<img src="3dcomponents-cad.png" alt="CAD model of a square, a heart, and a hexagon" width="1164" height="610">
+        <img src="3dcomponents-cad.png" alt="CAD model of a square, a heart, and a hexagon" width="1164" height="610">
             <h2> Process </h2>
             <p> Luckily, I'm not a novice when it comes to using a laser cutter. Actually, I'm guilty of hogging a laser cutter when I was in undergrad for several hours to rasterize guitar sheet music into wood for a present. But, anyway, this was my first time using Rhino to design parts to be laser cut from cardboard. I initially wanted to make something really cool, like a geodesic dome kit <a href="https://malvenko.medium.com/uw-hcde598-digital-fabrication-assignment-1-laser-cut-press-fit-construction-kit-9fcaa6f7d5aa">(example)</a>. But, I wasn't able to spend time on campus this week to do some rapid prototyping iterations, so I went with a simpler design of three components: a square, a heart, and a hexagon. I just picked these shapes randomly. Well, I thought a heart was interesting. But, they can be stuck together to form abstract shapes.
             </p>
             <h3> Rhino Model </h3>
             <p> I made 2D drawings for each shape. Each component fits within a 1.5x1.5 in square. To make the square more interesting, I cut away the corners using arcs. I drew the heart using three circles and tangent lines. I drew the hexagon using line segments. I added chamfers on the slots to aid in insertion. Some images of my drawings:
-            
             </p>
-		<img src="heart-dwg.png" alt="heart drawing in Rhino" width="704" height="762">
+        <img src="heart-dwg.png" alt="heart drawing in Rhino" width="704" height="762">
             <img src="component-dwgs.png" alt="square, hexagon, and heart drawings in Rhino" width="1700" height="598">
             <p> To figure out the right dimensions for the extrusion, I took several measurements and found the average of the cardboard thickness: 0.148 +/- 0.012 in. I used the Join and ExtrudeCrv commands to create the 3D extruded components, 0.148 in in thickness. See my models below!
             
             </p>
-		<img src="3dcomponents-cad.png" alt="CAD model of a square, a heart, and a hexagon" width="1164" height="610">
+        <img src="3dcomponents-cad.png" alt="CAD model of a square, a heart, and a hexagon" width="1164" height="610">
             <p> A link to my Rhino file can be found <a href="https://drive.google.com/file/d/1dHfqvBbTbLmAfPqJ6-MI83GrzSmWaE6a/view?usp=sharing">here<a>.
             </p>
+            <h2>TBD - Laser Cutting</h2>
             <h3> Cut Outs - TBD </h3>
-            <p> I'm going to do a slot size test to determine the right size for the press fit, by creating test slots that differed by a thou, ranging from 0.145 in to 0.150 in. The best sized slot for my cardboard for a press fit is X in. [insert pic of slot test]. So, I went back to Rhino and added the right sized slots to my components: 0.22xX in.
-            </p>
+                <p> I'm going to do a slot size test to determine the right size for the press fit, by creating test slots that differed by a thou, ranging from 0.145 in to 0.150 in. The best sized slot for my cardboard for a press fit is X in. [insert pic of slot test]. So, I'll back to Rhino and add the right sized slots to my components: 0.22xX in.
+                </p>
             <h3> Preparing for Cutting - TBD </h3>
-            <p>I exported my drawing from Rhino to an AI file. I copied each shape in Adobe Illustrator so that I had 10 of each, and arranged them for cutting.
-            </p>
+                <p>I exported my drawing from Rhino to an AI file. I copied each shape in Adobe Illustrator so that I had 10 of each, and arranged them for cutting. For now, I have a demo AI file that is 28x40 in that shows what my file would look like for laser cutting.
+                </p>
             <h3> Laser Cutting </h3>
-            <p> Using the Epilog M2 [32/40] laser cutter in The Mill, I cut out my components using the following settings: X power, Y speed, and Z frequency. Notes on cutting to be inserted when completed.
-            </p>
+                <p> Using the Epilog M2 [32/40] laser cutter in The Mill, I'll cut out my components using the following settings: X power, Y speed, and Z frequency. Notes on cutting to be inserted when completed.
+                </p>
             <h2>Source Files</h2>
-            <a href="https://drive.google.com/file/d/1dHfqvBbTbLmAfPqJ6-MI83GrzSmWaE6a/view?usp=sharing">Rhino Model<a>
-            <a href="">Adobe Illustrator file<a>
+                <p> If there is an issue accessing these files, please see this <a href="https://drive.google.com/drive/folders/1PyJDR5XpwPuuX_x5F_OhixdCZIDJBoc9?usp=sharing">Google Drive folder</a>.
+                </p>
+                <a href="a1_source_Alexa_beforeLaserCut.3dm">Rhino Model<a>
+                <a href="a1-lasercut-test.ai">Adobe Illustrator file - Test (To be updated)<a>
             <h2>Final Kudos</h2>
-            <p> Junchao and the staff at The Mill were helpful in completely this assignment!
-            </p>
+                <p> Junchao and the staff at The Mill were helpful in completing this assignment!
+                </p>
         </div>
-	</div>
+    </div>
     </body>
 </html>
