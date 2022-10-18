@@ -19,20 +19,20 @@
         
             <div class="project">
                 <h2> Finished Kit </h2>
-                <img src="/images/cardboard_crown.png" alt="cardboard crown" width="1800"> <br>
+                <img src="/hcde533/images/cardboard_crown.png" alt="cardboard crown" width="1800"> <br>
                 <h2> Process </h2>
                 <p> Like most people in our class, I'm not really used to parametric modeling - certainly not in Grasshopper. So, I decided to create a flower-like shape in Grasshopper that I thought would assemble well.
                 </p>
                 <h3> Grasshopper Parametric Model </h3>
                 <p> I created my shape in Grasshopper with a polar array of circles and a polar array of rectangles (~0.4 in depth). Step 1: I used the polar array of circles, a pentagon component, and a trim with regions component to make the general floral shape.
-                <img src="/images/floral-shape.png" alt="Grasshopper definitions and Rhino flower drawing" width="576"> <br>
+                <img src="/hcde533/images/floral-shape.png" alt="Grasshopper definitions and Rhino flower drawing" width="576"> <br>
                 Step 2: Then, I used a polar array of rectangles and and a vtrim with regions component to make the slots.
-                <img src="/images/slots-gh.png" alt="Grasshopper definitions and Rhino flower drawing" width="576"> <br>
+                <img src="/hcde533/images/slots-gh.png" alt="Grasshopper definitions and Rhino flower drawing" width="576"> <br>
                     <img src="/images/final-shape-dwg.png" alt="Grasshopper definitions and Rhino flower drawing" width="576"> <br>
                 Step 3: Then, I joined the curves and used an extrude component to extrude the shape. </p>
-                <img src="/images/floral-extrude.png" alt="Grasshopper definitions and Rhino components extruded" width="288"> <br>
+                <img src="/hcde533/images/floral-extrude.png" alt="Grasshopper definitions and Rhino components extruded" width="288"> <br>
                 <p> The cardboard thickness is set by a number slider component. Using a subtract component, I subtract the cardboard thickness by 0.020 in for the slot width for a press fit. So, if you change the cardboard thickness, the slot width will adjust as well. See my definitions below!
-                <img src="/images/slots-components-gh.png" alt="Grasshopper definitions for slots" width="1152"> <br>
+                <img src="/hcde533/images/slots-components-gh.png" alt="Grasshopper definitions for slots" width="1152"> <br>
                 </p>
         
                 <h2>Laser Cutting</h2>
@@ -42,18 +42,18 @@
                     <p> I first ran a test cut, cutting 2 components, to make sure the dimensions and press fit were appropriate. I cut out my components using the laser cutter in the 8. I used the settings for mat board, but I set the material thickness to 0.45 in for cutting. My parts didn't catch on fire! I had to cut on 2 pieces of cardboard because my cardboard pieces were taken from a smaller Amazon box. </p>
                     
                     <p> Here is a GIF of my parts mid-cut! </p>
-                    <img src="/images/parts_midcut.gif" alt="GIF showing laser cutting" width="640"> <br>
+                    <img src="/hcde533/images/parts_midcut.gif" alt="GIF showing laser cutting" width="640"> <br>
                     
                     <h2> Final Kit </h2>
                     <p> My final kit consists of 40 pieces (several spares). Here's a cardboard crown made with 14 pieces!
-                    <img src="/images/cardboard_crown.png" alt="cardboard crown" width="1800"> <br>
+                    <img src="/hcde533/images/cardboard_crown.png" alt="cardboard crown" width="1800"> <br>
                     <br>
                     And a fun structure made with 17 pieces (+ the crown)!
-                    <img src="/images/cardboard_structures.png" alt="cardboard structures" width="432"> <br>
+                    <img src="/hcde533/images/cardboard_structures.png" alt="cardboard structures" width="432"> <br>
                     <br>
                     
                     It passes the shake test! </p>
-                    <img src="/images/shake_test_a2.gif" alt="GIF showing a cardboard kit being shaken" width="960"> <br>
+                    <img src="/hcde533/images/shake_test_a2.gif" alt="GIF showing a cardboard kit being shaken" width="960"> <br>
                         
                     <h2> Reflection </h2>
                     <p> I didn't need to make my slots as long as I did. Also, I didn't include a chamfer or fillet on my edges because I couldn't figure out how to do it in Grasshopper. The insertion was a bit difficult and a fillet would've helped. Maybe next time! I wanted to know if I could use a number slider to change the number of circles for the polar array component as well, but I ran into trouble with the polygon component that's used for trimming. </p>
