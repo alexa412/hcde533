@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>Alexa Schlein's HCDE 533 Digital Fabrication Page!</title>
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head>
+    <body>
+        <main>
+        <div class="main">
+            <div class="header">
+                <h1>Assignment 2: Parametric Press Fit Construction Kit!</h1>
+                <p> by Alexa Schlein for HCDE 533, October 2022</p>
+            </div>
+        
+            <div class="project">
+                <h2> Finished Kit </h2>
+                <img src="/images/cardboard_crown" alt="cardboard crown" width="1800"> <br>
+                <h2> Process </h2>
+                <p> Like most people in our class, I'm not really used to parametric modeling - certainly not in Grasshopper. So, I decided to create a flower-like shape in Grasshopper that I thought would assemble well.
+                </p>
+                <h3> Grasshopper Parametric Model </h3>
+                <p> I created my shape in Grasshopper with a polar array of circles and a polar array of rectangles (~0.4 in depth). Step 1: I used the polar array of circles, a pentagon component, and a trim with regions component to make the general floral shape.
+                <img src="/images/floral-shape.png" alt="Grasshopper definitions and Rhino flower drawing" width="576"> <br>
+                Step 2: Then, I used a polar array of rectangles and and a vtrim with regions component to make the slots.
+                <img src="/images/slots-gh.png" alt="Grasshopper definitions and Rhino flower drawing" width="576"> <br>
+                    <img src="/images/final-shape-dwg.png" alt="Grasshopper definitions and Rhino flower drawing" width="576"> <br>
+                Step 3: Then, I joined the curves and used an extrude component to extrude the shape. </p>
+                <img src="/images/floral-extrude.png" alt="Grasshopper definitions and Rhino components extruded" width="288"> <br>
+                <img src="/images/component-dwgs-small.png" alt="Grasshopper definitions and Rhino components" width="576"> <br>
+                <p> The cardboard thickness is set by a number slider component. Using a subtract component, I subtract the cardboard thickness by 0.020 in for the slot width for a press fit. So, if you change the cardboard thickness, the slot width will adjust as well. See my definitions below!
+                <img src="/images/slots-components-gh.png" alt="Grasshopper definitions for slots" width="1152"> <br>
+                </p>
+        
+                <h2>Laser Cutting</h2>
+                <h3> Prototyping </h3>
+                    <p> To figure out the right dimensions for the extrusion, I took several measurements and found the average of the cardboard thickness: 0.125 +/- 0.009 in. I set the cardboard thickness in Grasshopper, and then baked the into Grasshopper. Then, I exported the shape into an Adobe Illustrator file.</p>
+                <h3> Laser Cutting </h3>
+                    <p> I first ran a test cut, cutting 2 components, to make sure the dimensions and press fit were appropriate. I cut out my components using the laser cutter in the 8. I used the settings for mat board, but I set the material thickness to 0.45 in for cutting. My parts didn't catch on fire! I had to cut on 2 pieces of cardboard because my cardboard pieces were taken from a smaller Amazon box. </p>
+                    
+                    <p> Here is a GIF of my parts mid-cut! </p>
+                    <img src="/images/parts_midcut.gif" alt="GIF showing laser cutting" width="640"> <br>
+                    
+                    <h2> Final Kit </h2>
+                    <p> My final kit consists of 40 pieces (several spares). Here's a cardboard crown made with 14 pieces!
+                    <img src="/images/cardboard_crown" alt="cardboard crown" width="1800"> <br>
+                    <br>
+                    And a fun structure made with 17 pieces (+ the crown)!
+                    <img src="/images/cardboard_structure" alt="cardboard structures" width="432"> <br>
+                    <br>
+                    
+                    It passes the shake test! </p>
+                    <img src="/images/shake_test_a2.gif" alt="GIF showing a cardboard kit being shaken" width="960"> <br>
+                        
+                    <h2> Reflection </h2>
+                    <p> I didn't need to make my slots as long as I did. Also, I didn't include a chamfer or fillet on my edges because I couldn't figure out how to do it in Grasshopper. The insertion was a bit difficult and a fillet would've helped. Maybe next time! I wanted to know if I could use a number slider to change the number of circles for the polar array component as well, but I ran into trouble with the polygon component that's used for trimming. </p>
+                <h2>Source Files</h2>
+                    <p>If there is an issue accessing these files, please see:
+                        <a href="https://drive.google.com/drive/folders/1PyJDR5XpwPuuX_x5F_OhixdCZIDJBoc9?usp=sharing">Google Drive folder</a>
+                            <br>
+                        <a href="/assignment2/a2_Alexa.3dm">Rhino Model</a>
+                            <br>
+                        <a href="/assignment1/a2_Alexa.gh">Grasshopper Model</a>
+                    </p>
+                <h2>Final Kudos</h2>
+                    <p> I used Junchao's tutorial and Nadya's in-class demonstration to complete this assignment. There were no techs at the 8, so shout out to Ji Su for helping me with the settings on the laser cutter!
+                    </p>
+            </div>
+        <div class="return">
+            <a href="index.html">Return to Main Page</a>
+        </div>
+
+    </div>
+        </main>
+    </body>
+</html>
