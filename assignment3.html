@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>Alexa Schlein's HCDE 533 Digital Fabrication Page!</title>
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head>
+    <body>
+        <main>
+            <div class="main">
+                <div class="header">
+                    <h1>Assignment 3: 3D Printing!</h1>
+                    <p> by Alexa Schlein for HCDE 533, October 2022</p>
+                </div>
+            
+                <div class="project">
+                    <h2>Building My Printer</h2>
+                        <p>I have visitors from out of town, so I've been building my printer slowly in small sprints. It probably took me about 2 and a half hours in total, over a few days, to get the printer built. I did use Nadya's slide deck to make sure there were no cracks of light coming through intersecting parts on my printer base - so it ended up being a pain to get the screws just right. I got confused with setting up the y-axis, so I followed <a href="https://www.youtube.com/watch?v=ibsOYzXduYc">this YouTube tutorial</a>. I saw a message from Junchao in Discord, and realized that my belt was reversed, so I had to fix that too. Here is a picture of my printer set up!</p>
+                        <img src="/hcde533/images/3dprinter.jpeg" alt="Ender 3 Pro 3D printer on a table" width="400">
+                    <h2>Leveling My Printer</h2>
+                        <p>OH BOY. I was so confused with leveling the printer. Like everyone else, I followed <a href="https://www.youtube.com/watch?v=_EfWVUJjBdA">this YouTube tutorial</a> (same one as the rest of the class). I accidentally tried to do the squares printing step first. During this, I realized that my binder clips were in the wrong place (they were on the sides instead of the front and back), so the nozzle scratched on the clips and on the glass surface itself. Whoops. I had to adjust the z-switch several times (following <a href="https://www.youtube.com/watch?v=bGGNlHkuLX4">this YouTube video</a>) until I found the right position.
+                        <img src="/hcde533/images/zswitch.jpg" alt="z-switch of an Ender 3 pro 3d printer" width="400">
+                        <p>Then, when I got back on the right track, it took me a few tries to level my bed. I was pretty lost with the adjustment screws, so I decided to tighten them to about the mid-level, and restart the leveling. I used a sticker for the leveling, and leveled the bed once more using a mailer from Ulta Beauty. Then, when I was FINALLY ready to do the leveling squares print, I wasn't sure how to insert my filament. So, I followed <a href="https://www.youtube.com/watch?v=20xTO4HkuZY&t=105s">this video</a> to do so. Then, FINALLY, I printed my leveling squares. Amazingly, they adhered perfectly the first time, and I didn't have to adjust my bed at all.</p>
+                        <img src="/hcde533/images/levelSquares.gif" alt="GIF of 3d printed squares for leveling a printer" width="">
+                    <h2>Test Prints</h2>
+                        <h3>Building the Cube and Cylinder 3D Models</h3>
+                            <p>Building the cube and the cylinder were super easy in Rhino. I just extruded a square and a circle for the cube and the cylinder, respectively. The tubes, on the other hand…</p>
+                        <h3>The Tube Problem</h3>
+                            <p>It took me a while to find out about the tube command. Like, in SolidWorks, normally I would make a tube by extruding 2 circles (or extrude 1 circle and cut away a second, smaller circle). But, I found and used the <a href="http://docs.mcneel.com/rhino/5/help/en-us/commands/tube.htm">Rhino Tube command</a>. At first, I got confused with the dimensions and tried to make a tube with a 0.04mm wall thickness, which refused to slice in Cura. Once I got the dimensions sorted, well, my tube still refused to load in Cura (it appeared as a box). I followed <a href="https://www.youtube.com/watch?v=yuwJ89OgpWE">this YouTube tutorial</a> to convert a model in Rhino to a mesh object, and I exported the mesh to an STL. I repeated this process for the 0.08mm wall thickness tube. Finally, both of those were able to be sliced in Cura.</p>
+                            <img src="/hcde533/images/meshModel.png" alt="Mesh CAD models of thin tubes" width="400">
+                        <h3>Results</h3>
+                            <p>I was able to print all of the test objects successfully. I actually had trouble removing the prints, so I followed <a href="https://www.youtube.com/watch?v=VCCbzCvtRzU">this YouTube video</a>, which shows how to use shear forces to your advantage to remove a print. All of my test prints printed within the 1mm tolerance, so I didn't have to make any adjustments. Here's a summary of my results:</p>
+                            <img src="/hcde533/images/a3_results.png" alt="Table with information about 3d prints" width="720">
+                            <p>Here's a picture of all of my printed objects:</p>
+                            <img src="/hcde533/images/testPrints.jpeg" alt="10 white 3d printed objects" width="600">
+                    <h2>Nested Object - Turner's Cube</h2>
+                        <h3>Inspiration</h3>
+                            <p>Years ago, at my first job out of college, one of my coworkers showed me a nested cube that he had 3d printed at home. I barely remembered what it looked like, but I knew it was a nested cube. After a few Google searches, I found what I was looking for: A Turner's Cube! (<a href="https://makezine.com/article/digital-fabrication/3d-printing-workshop/the-turners-cube-classic-machinists/">Source</a>)</p>
+                            <img src="/hcde533/images/metalTurnersCube.png" alt="Metal milled Turner's Cube" width="">
+                            <p>A Turner's Cube is a common project made with a CNC mill. It's a series of nest cubes with bores. Each cube can move around individually, and the inner cubes can't fall out of the structure, so it stays nested and assembled.</p>
+                        <h3>Building a 3D Model</h3>
+                            <p>I wasn't sure about the dimensions to use, so I followed <a href="https://www.instructables.com/Turners-Cube-Manual-Machine/">this project's</a> dimensions. This person used subtractive manufacturing to build a 2 inch Turner's Cube with 3 cubes. I built the smallest cube first in Rhino using the Rectangle, ExtrudeCrv, Circle, and MakeHole commands (again, I had to Google to find the right commands! Why doesn't Rhino work the same as SolidWorks! Haha). Then, I made a copy of the cube and scaled it 1.77x - just to the point where the smaller cube's width was about the same as the diameter of the bigger cube's bore. I repeated this process for the largest cube. Don't copy my process because it's not correct. There's actual math behind it that I didn't see until I started writing up my documentation. Anyway, here is my model below:</p>
+                            <img src="/hcde533/images/turnersCube_Rhino.png" alt="Rhino model of a Turner's Cube" width="720">
+                        <h3>Test Prints</h3>
+                            <p>I exported my Turner's cube as an STL, and then found out it was going to take hours to print. I followed the print settings from <a href="https://cults3d.com/en/3d-model/various/turners-cube">this project</a>. So, I decided to do test prints at ⅕ of the size. I wasn't sure what kinds of supports were needed (and Google wasn't helping), so I ran the first test cube with supports everywhere - that took about 14 minutes to print and I wasn't able to remove the supports. I ran my second test cube with supports that touch the build plate only. That took about 11 minutes to print. I still wasn't able to remove the supports, but the top half of the cube built successfully without supports everywhere, so I decided to go for it!</p>
+                            <img src="/hcde533/images/testTurnersCubes.jpeg" alt="small 3d printed cubes with supports" width="250">
+                        <h3>Final Prototyping</h3>
+                            <p>Using the full scale STL file, I printed my Turner's cube with 50% infill, concentric top/bottom pattern, low quality, and supports touching the build plate. The final print took 3 hours, 47 minutes, and 31 seconds. I was able to punch out some of the supports. For the supports on the bottom of the cube, I actually used a cheese board knife to (gently) break it off. Here's the final result!</p>
+                            <img src="/hcde533/images/turnersCubeWithSupports.jpeg" alt="3d printed Turner's cube with supports" width="600">
+                            <br>
+                            <img src="/hcde533/images/turnersCubeFinal.jpeg" alt="3d printed Turner's cube" width="600">
+                            <p>If you shake it, it doesn't come apart! Yay nesting! Yay puzzles!</p>
+                            <img src="/hcde533/images/shakeCube.gif" alt="GIF of 3d printed Turner's cube being shaken" width="">
+                    <h2> Reflection </h2>
+                        <p> I would've saved a lot of time had I gone to YouTube before and paid more attention when trying to build and level my printer. I'm also really happy I was able to build the Turner's cube. I do wish I had made the cube mathmatically accurate (whoops) and added fillets, but I can't complain because it works! </p>
+                    <h2>Source Files</h2>
+                        <p>If there is an issue accessing these files, please see:
+                            <a href="https://drive.google.com/drive/folders/1PyJDR5XpwPuuX_x5F_OhixdCZIDJBoc9?usp=sharing">Google Drive folder</a>
+                                <br>
+                            <a href="/assignment3/A3_AlexaSchlein.zip">A3 Zip File</a>
+                                <br>
+                        </p>
+                    <h2>Final Kudos</h2>
+                        <p> I would like to thank Junchao, Nadya, and all of our classmates in the questions-and-answers Discord channel for helping me with this assignment in various ways. Here are all the links to the YouTube videos and project documents that I referenced for this assignment:
+                            <ul>
+                                <li><a href="https://www.youtube.com/watch?v=ibsOYzXduYc">3D Printer build video</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=_EfWVUJjBdA">Leveling the bed video</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=bGGNlHkuLX4">Adjusting the z-switch video</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=20xTO4HkuZY&t=105s">Loading the filament video</a></li>
+                                <li><a href="http://docs.mcneel.com/rhino/5/help/en-us/commands/tube.htm">Rhino Tube command</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=VCCbzCvtRzU">Removing 3d prints from the bed</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=yuwJ89OgpWE">Creating a mesh in Rhino</a></li>
+                                <li><a href="https://makezine.com/article/digital-fabrication/3d-printing-workshop/the-turners-cube-classic-machinists/">Turner's cube information</a></li>
+                                <li><a href="https://www.instructables.com/Turners-Cube-Manual-Machine/">Turner's cube dimensioins</a></li>
+                                <li><a href="https://cults3d.com/en/3d-model/various/turners-cube">Turner's cube print settings</a></li>
+                            </ul>
+                        </p>
+                </div>
+                <div class="return">
+                    <a href="index.html">Return to Main Page</a>
+                </div>
+
+            </div>
+        </main>
+    </body>
+</html>
