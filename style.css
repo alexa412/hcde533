@@ -25,13 +25,12 @@ header {
     align-items: center;
 }
 
-header h1 {
+header h1, h3 {
     padding-top: 200px;
     text-align: center;
 }
 
-.header {
-    text-align: center;
+.header p {
     padding: 30px;
 }
 
