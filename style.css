@@ -30,8 +30,12 @@ header h1, h3 {
     text-align: center;
 }
 
-.header p {
+.header {
     padding: 30px;
+}
+
+.header img {
+    align-items: center;
 }
 
 /* end header style rules ---------------------------------------------------*/
