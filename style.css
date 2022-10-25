@@ -107,11 +107,28 @@ p a {
     text-decoration: underline;
 }
 
+ul a {
+    color: #194F92;
+    text-decoration: underline;
+}
+
 p a:hover {
     font-weight: bold;
     text-shadow: 0 0 0.2em #FFCBC4;
     text-decoration: none;
 }
+
+ul a:hover {
+    font-weight: bold;
+    text-shadow: 0 0 0.2em #FFCBC4;
+    text-decoration: none;
+}
+
+li {
+    text-align: left;
+    margin-left: 50px;
+}
+
 /* end general link style rules: --------------------------------------------*/
 
 /*
