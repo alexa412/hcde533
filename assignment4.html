@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>Alexa Schlein's HCDE 533 Digital Fabrication Page!</title>
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head>
+    <body>
+        <main>
+            <div class="main">
+                <div class="header">
+                    <h1>Assignment 4: Milling!</h1>
+                    <p> by Alexa Schlein for HCDE 533, November 2022</p>
+                </div>
+            
+                <div class="project">
+                    <h2>Prototyping, Part 1</h2>
+                        <h3>Design</h3>
+                            <p>I designed a simple, 4-sided box in Rhino. The slots are 0.25 in and the opening is about 0.27 in. I drew a stars/swirly design in Adobe Illustrator, and then imported that to Rhino for engraving. But, I never got to engraving... more on that later!</p>
+                            <img src="/hcde533/images/Engraving.png" alt="design in Rhino with stars engraving" width="400">
+                        <h3>Initial Test Cut</h3>
+                            <p>I first decided to do a test cut without the engraving, just to make sure I had designed my slots correctly. So, I exported the cuts only to a DXF, then into KiCAD, then into Bantam. I ended up having to do several test cuts, but my settings in Bantam were generally around:
+                                <ul>
+                                    <li>1/32" Flat End Mill</li>
+                                    <li>Traces ON (which was a mistake)</li>
+                                    <li>X: 70mm</li>
+                                    <li>Y: 100mm</li>
+                                    <li>Z: 1.5mm</li>
+                                    <li>Z Offset: ~1.6mm (depending on the sacrificial layer used)</li>
+                                    <li>Planned Offset: 5mm in X, 5mm in Y</li>
+                                </ul>
+                            </p>
+                            <p>With traces turned ON, my model appeared like this in Bantam, which I thought was normal:</p>
+                            <img src="/hcde533/images/TracesOn.png" alt="Bantam settings for milling" width="400">
+                        <h3>Milling - Tape Failure</h3>
+                            <p>Tape Failure! I had to run 4 test mill jobs, during which I had to stop the job each time because the material detached from the sacrificial layer. I guess I'm bad at applying double sided tape!</p>
+                        <h3>Milling - Trace Failure:</h3>
+                            <p>Once I finally got the milling to work, and I got to see a completed job and parts... Well, no surprise here, they had tracing AND cuts instead of cuts only. Junchao swooped in to help me and explained that I had traces turned on. However, after turning traces off, Junchao pointed out my dog bones were too small and were missing on the left side of my part:</p>
+                            <img src="/hcde533/images/Dogbones_Failure.png" alt="Bantam showing lack of Dognones in design for milling" width="300">
+                    <h2>Prototyping, Part 2</h2>
+                        <h3>Design</h3>
+                            <p>I went back into Rhino and added the larger dog bones, and repeated the Rhino, KiCAD, Bantam workflow. This time around, I turned traces OFF. I did have another issue with Bantam adding traces when I didn't need them, and I had to return to Rhino to make sure all of my curves were closed. After fixing that, milling worked.</p>
+                        <h3>Milling Success</h3>
+                            <p>After fixing everything in Rhino and Bantam, my parts were milled successfully!</p>
+                            <img src="/hcde533/images/FirstMillSuccess.jpeg" alt="milled parts" width="400">
+                        <h3>Design Failure</h3>
+                            <p>However, I made a mistake in my design! My parts didn't fit together, even with attempting to sand. At first, I thought it was because I made the slots too small.</p>
+                            <img src="/hcde533/images/FailedAssembly.jpeg" alt="milled parts that don't fit" width="300">
+                            <p>It turns out, I had an alignment issue with the slots in my design. See the black line in the image below. Note to self: Always check your design before machining it!</p>
+                            <img src="/hcde533/images/FailedDesign_Rhino.png" alt="failed Rhino design" width="400">
+                    <h2>Final Prototype</h2>
+                            <h3>Design</h3>
+                                <p>I redesigned my part one more time in Rhino! This time around, the part is designed correctly. The part that fits into the slots is 0.25 in, and the slots themselves are about 1.05x that length.</p>
+                                <img src="/hcde533/images/FinalDesign_Rhino.png" alt="designed part in Rhino for milling" width="400">
+                                <br>
+                                <img src="/hcde533/images/CorrectSlots.png" alt="parts that fit together" width="300">
+                            <h3>Bantam Settings</h3>
+                            <p>After repeating the Rhino, KiCAD, Bantam workflow steps, for my final mill job, my settings were:
+                                <ul>
+                                    <li>1/32" Flat End Mill</li>
+                                    <li>Traces OFF</li>
+                                    <li>X: 70.3mm</li>
+                                    <li>Y: 101.6mm</li>
+                                    <li>Z: 1.56mm</li>
+                                    <li>Z Offset: 1.6mm</li>
+                                    <li>Planned Offset: 5mm in X, 5mm in Y</li>
+                                </ul>
+                            </p>
+                            <img src="/hcde533/images/Final_Bantam.png" alt="Bantam settings for milling" width="400">
+                            <h3>Milling</h3>
+                                <p>Here's a pic of my parts being milled:</p>
+                                <img src="/hcde533/images/milling.png" alt="milling" width="">
+                            <h3>Results</h3>
+                                <p>My parts right after milling:</p>
+                                <img src="/hcde533/images/PostMilling.jpeg" alt="milled parts right after milling" width="400">
+                                <p>My parts assembled:</p>
+                                <img src="/hcde533/images/FinalAssembly.jpeg" alt="assembly of milled parts" width="400">
+                    <h2> Reflection </h2>
+                        <p> I was rushing on this homework, which was a big mistake. I should really slow down to verify my parts are designed correctly before attempting to machine them. That'll save me a lot of time and money. </p>
+                    <h2>Source Files</h2>
+                        <p>If there is an issue accessing these files, please see:
+                            <a href="https://drive.google.com/drive/folders/1PyJDR5XpwPuuX_x5F_OhixdCZIDJBoc9?usp=sharing">Google Drive folder</a>
+                                <br>
+                            <a href="/assignment4/A4 Alexa Schlein.zip">A4 Zip File</a>
+                                <br>
+                        </p>
+                    <h2>Final Kudos</h2>
+                        <p>Thank you to Junchao for explaining Bantam and helping me through my prototyping process. Shout out to Rama for the support in the MILL!</p>
+                </div>
+                <div class="return">
+                    <a href="index.html">Return to Main Page</a>
+                </div>
+
+            </div>
+        </main>
+    </body>
+</html>
