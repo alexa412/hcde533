@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>Alexa Schlein's HCDE 533 Digital Fabrication Page!</title>
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head>
+    <body>
+        <main>
+            <div class="main">
+                <div class="header">
+                    <h1>Assignment 5: Getting Meshy and Lamps Part 1!</h1>
+                    <p> by Alexa Schlein for HCDE 533, November 2022</p>
+                </div>
+            
+                <div class="project">
+                    <h2>Getting Meshy</h2>
+                        <h3>Inspiration</h3>
+                            <p>I'm obsessed with dachshunds (see my family's dachshund, Winnie, below), so I found a dachshund STL on Thingiverse. I thought it would be fun to put a hat on the dachshund. So, I found a couple of different options, and ultimately went with a Harry Potter sorting hat! (sources linked at the end)</p>
+                            <img src="/hcde533/images/Winnie.png" alt="Winnie the dachshund" width="">
+                        <h3>Process</h3>
+                            <img src="/hcde533/images/InitialImport.png" alt="Dachshund and Sorting Hat STLs in Rhino" width="400">
+                            <p>I imported both STL meshes into Rhino. I had to:
+                                <ul>
+                                    <li>Rotate the sorting hat mesh</li>
+                                    <li>Manually scale down the sorting hat</li>
+                                    <li>Use the QuadRemesh command on both meshes</li>
+                                    <li>Position the sorting hat mesh over the dachshund mesh</li>
+                                    <li>Rotate and scale the sorting hat mesh until it looked correct</li>
+                                    <li>MeshBooleanUnion to combine the meshes</li>
+                                </ul>
+                                This allowed me to create a single closed mesh, suitable for 3D printing (with supports). 
+                            </p>
+                            <img src="/hcde533/images/FinalMeshDachshund.png" alt="Dachshund with sorting hat on CAD mesh" width="400">
+                        <h3>Santa Hat</h3>
+                            <p>Just for fun, I repeated the same process with a Santa hat.</p>
+                            <img src="/hcde533/images/SantaHatDachshund.png" alt="Dachshund with santa hat on CAD mesh" width="">
+                        <h3>Modifying Meshes</h3>
+                            <p>I also spent some time messing around with the final mesh using the PointsOn command and manually dragging points to change the shape, although it ended up looking a bit scary.</p>
+                            <img src="/hcde533/images/ModifiedMesh.png" alt="Dachshund with sorting hat mesh points extruded" width="250">
+                    <h2>Lamp Design</h2>
+                        <h3>Idea</h3>
+                            <p>My lampshade idea is using translucent laser cut acrylic chains, inspired by <a href="https://kikay.shop/products/rainbow-chains">these earrings</a>. So, to hold the chains, I came up with an idea for a 3D printed base. The lamp innards fit inside of the base. The base slips onto the innards through a slot, which has clearance for the cord. Once slipped on, the base slides down onto the lamp innards. Ideally, this lamp would hang from somewhere by the cord. The base kind of looks like a fancy cake stand, I suppose. The width of the scalloped portion of the base is about 6 inches. </p>
+                            <p>My initial idea was to do a cantilever snap fit design to hold the innards with a similar shade, but I pivoted to this design after having issues with 3D printing a snap fit holder. My design is specifically designed with some simpler geometry to allow for smoother 3D printing with minimal supports required. The base will be printed upside down. To save on material, I might make "top" or decoration for the base out of paper or something else.</p>
+                            <img src="/hcde533/images/LampSketch.png" alt="sketch of lamp design" width="400">
+                        <h3>Design Part 1 - The Base</h3>
+                            <p>First, I created a general shape for the base by measuring the outer dimensions of the lamp innards. I created a basic closed curve and revolved it to create the solid.</p>
+                            <img src="/hcde533/images/RevolveBase.png" alt="revolve in Rhino" width="300">
+                        <h3>Design Part 2 - The Scalloped Edge</h3>
+                            <p>Unsurprisingly, there aren't great tutorials online for scalloped shapes and edges. I was all on my own for this part. Shout out to Junchao for walking me through doing this in Rhino so that I could recreate it in Grasshopper! Because I wasn't sure how big I wanted the scallops to be and how many I wanted on the edge, I decided to use Grasshopper for parametric modeling. I created the scalloped edge by (1) creating the scallop shape with a hole for the acrylic chains, (2) creating a linear array of scallops, (3) making a circle that matches the outer diameter of the scalloped edge, and (4) flowing the linear array of scallops onto the curve to create a circle of scallops. I used number sliders throughout this process to test different sizes.</p>
+                            <img src="/hcde533/images/GHSS.png" alt="Grasshopper File Screenshot" width="">
+                            <p>Step 1: Scallop Shape</p>
+                            <img src="/hcde533/images/Step1.png" alt="Grasshopper - Scallop shape" width="">
+                            <p>Step 2: Linear Array of Scallops</p>
+                            <img src="/hcde533/images/Step2.png" alt="Grasshopper - Scallop array" width="">
+                            <p>Step 3: Edge Circle</p>
+                            <img src="/hcde533/images/Step3.png" alt="Grasshopper - Scallop edge circle" width="">
+                            <p>Step 4: Flowing Scallop Array onto the Circle</p>
+                            <img src="/hcde533/images/Step4.png" alt="Grasshopper - Scallop flow" width="">
+                            <p>I then baked the circle of scallops into Rhino, and used the BooleanUnion command to join the base to the scallops to create my scalloped lamp base. I added fillets to the edges, as well.</p>
+                            <img src="/hcde533/images/BakedScallops.png" alt="CAD model of scalloped circle" width="400">
+                            <br>
+                            <img src="/hcde533/images/LampBaseShaded.png" alt="CAD model of lamp base" width="400">
+                        <h3>Design Part 3 - Cord Slot</h3>
+                            <p>To create a slot for the lamp cord to slip into the base, I created a 5.1mm wide extruded rectangle. I used the BooleanDifference command to create the slot, and then added some fillets. I'm going to print out the base later this week!</p>
+                            <img src="/hcde533/images/LampBaseSlot.png" alt="CAD model of lamp base with slot" width="800">
+                        <h3>Design Part 4 - Acrylic Chain Shape</h3>
+                            <p>For now, I designed a few simple shape in Rhino for my acrylic chains. I'll be purchasing acrylic this week from TAP Plastics and laser cutting about 300 chain pieces at the MILL with the acrylic (12 chains per link, 25 links total).</p>
+                            <img src="/hcde533/images/ChainShapes.png" alt="shapes for chains made in Rhino" width="300">
+                        <h3>To Do</h3>
+                            <p>I wasted so much time on testing snapfits that I have quite a large to do list for this coming week:
+                                <ul>
+                                    <li>3D print and test the base (innards holder)</li>
+                                    <li>Order acrylic</li>
+                                    <li>Decide on shape and laser cut chains</li>
+                                    <li>Assemble chains and attach to lamp base</li>
+                                    <li>Consider additional lofted surface design or decorations for the top of the base</li>
+                                </ul>
+                            </p>
+                    <h2>Reflection</h2>
+                        <p>I wish I had abandoned the snap fit idea earlier so I could move onto other things. For my final project, I definitely want to create a more interesting design in Rhino. But, for now, I'm excited about this chain lamp design and I'm happy that I got more familiar with Grasshopper!</p>
+                    
+                    <h2>Source Files</h2>   
+                        <p>If there is an issue accessing these files, please see:
+                            <a href="https://drive.google.com/drive/folders/1PyJDR5XpwPuuX_x5F_OhixdCZIDJBoc9?usp=sharing">Google Drive folder</a>
+                                <br>
+                            <a href="/assignment4/A5 Alexa Schlein.zip">A4 Zip File</a>
+                                <br>
+                        </p>
+                    <h2>References</h2>
+                        <ul>
+                            <li><a href="https://www.thingiverse.com/thing:3128169">Sorting Hat STL</a></li>
+                            <li><a href="https://www.thingiverse.com/thing:547041">Santa Hat STL</a></li>
+                            <li><a href="https://www.thingiverse.com/thing:182122">Dachshund STL</a></li>
+                        </ul>
+                    <h2>Final Kudos</h2>
+                        <p>Thank you to Junchao for walking me through creating my scalloped edge! Couldn't have done it without him!</p>
+                    <h2><a href="index.html">Return to Main Page</a></h2>
+                </div>
+                <div class="return">
+                    <a href="index.html">Return to Main Page</a>
+                </div>
+
+            </div>
+        </main>
+    </body>
+</html>
