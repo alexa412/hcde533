@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>Alexa Schlein's HCDE 533 Digital Fabrication Page!</title>
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head>
+    <body>
+        <main>
+            <div class="main">
+                <div class="header">
+                    <h1>Assignment 6: Lamps Part 2 and Molding & Casting Part 1!</h1>
+                    <p> by Alexa Schlein for HCDE 533, November 2022</p>
+                </div>
+            
+                <div class="project">
+                    <h2>Finishing My Lamp</h2>
+                        <h3>Lamp Design</h3>
+                            <p>Continuing from last week, I was so set on making an easy-to-print, cake stand-like lamp cover with holes from which acrylic chains would dangle. I did accomplish this, but it didn't make for the best lamp shade. More on that later!</p>
+                        <h3>Testing My Lamp Base</h3>
+                            <p>I measured out the lamp components and designed a component that would slide onto the lamp cord and slide down onto the lamp innards. I built this in Rhino using the revolve command. I had the wrong dimensions on the first piece, so it was too big. Glad I tested it though!</p>
+                            <img src="/hcde533/images/FirstBase.png" alt="test base that goes onto lamp innards" width="300">
+                        <h3>Lamp Base - Final Design</h3>
+                            <p>Once I corrected the base component, I used the same Grasshopper model I created last week (<a href="assignment5.html">see assignment 5</a> for details on the GH definition), with adjusted parameters to create a smaller and thinner scalloped edge. My original 6 inch base design wouldn't slice in Cura because it was way too big. I designed my base such that it could easily print upside down without supports. Most of the base printed quite well, with the exception of the holes. I don't mind that, though, because the acrylic chains are supposed to be the stars of the show. However, I do regret not designing the base to cover the light bulb. You'll see why later!</p>
+                            <img src="/hcde533/images/LampBaseRhino.png" alt="rhino model of lamp base with scalloped edge" width="500">
+                            <br>
+                            <img src="/hcde533/images/FinalLampBase.png" alt="lamp base with scalloped edge" width="300">
+                        <h3>Lamp Shade Design</h3>
+                            <p>My lamp shade is built of laser cut acrylic chains. I was inspired by <a href="https://www.1stdibs.com/furniture/lighting/chandeliers-pendant-lights/vintage-midcentury-murano-chain-link-chandelier/id-f_8647373/">chandeliers like these</a>, as well as laser cut earrings and groovy, 1970s flowers. So, I designed a chain link shape and 2 flower shapes (using the polar array command) in Rhino - to be laser cut for my lamp shade. Each laser cut piece hooks together, so I added a line in the Rhino drawing so that the laser would slice through each piece. Thus, I would literally be able to chain the pieces together.</p>
+                            <img src="/hcde533/images/ChainCutDesign.png" alt="Rhino drawing of chain shapes" width="300">
+                        <h3>Materials</h3>
+                            <p>I went to TAP Plastics in South Lake Union and purchased two 1/8 in thick 12x12 sheets of acrylic in <a href="https://www.tapplastics.com/product/plastics/cut_to_size_plastic/acrylic_sheets_transparent_colors/519">fluorescent red</a> and <a href="https://www.tapplastics.com/product/plastics/cut_to_size_plastic/acrylic_sheets_transparent_colors/519">fluorescent yellow</a>. I thought these colors would look really cool with light shining through them.</p>
+                        <h3>Laser Cutting</h3>
+                            <p>Similar to assignments 1 and 2, I exported the 3 component drawing to an Adobe Illustrator file. I used the laser cutter in the 8. I ran several test cuts. I used the cell cast acrylic settings in the material properties section. I did have to adjust the power and speed for the chain shape - this shape didn't cut through with one pass of the laser cutter.I cut around 60 chain links and about 100 of each flower shape. A few of them broke from my mishandling them.</p>
+                            <img src="/hcde533/images/LaserCutPieces.png" alt="acrylic laser cut pieces" width="400">
+                            <p>I spent well over 2 hours in the 8 doing several cuts, adjusting AI files, and so on. It was kinda awful. Even worse was when I realized I had to peel 2 paper films off every. Single. Piece. Acrylic sheets come with paper or plastic films so to protect the edges from getting burnt during laser cutting. So, peeling the film off each piece took me about 2 and a half hours in total. After I broke a nail, I swung by Bartell Drugs for tweezers to help me with peeling.</p>
+                            <img src="/hcde533/images/PeelingPaper.png" alt="peeling paper from laser cut acrylic" width="400">
+                        <h3>Assembling the Lamp Shade</h3>
+                            <p>I kinda just assembled the pieces at random with alternating colors. The slit in the chain link shape opens up very easily to accept pieces. The slit in the larger flower shape will open up, but it's kinda difficult. The slit in the smallest flower shape is useless - that one will break if I attempt to open it. So, I assembled chain designs by hand. I did that a few times over the course of a couple of hours (yes, HOURS) until I found a pattern that I like. On my current lamp shade setup, I have long links in 14 of the 21 holes in the base. (That's mostly because I wanted the chains to be longer, and I didn't have enough for all 21 spots). It is kinda neat though that this is a build-your-own-shade kind of design.</p>
+                            <img src="/hcde533/images/ChainAssembly.png" alt="acrylic laser cut pieces chained together" width="300">
+                            <p>So, anyway, the assembly, like laser cutting and peeling, was also kinda awful and I broke a few pieces along the way. I should've listened to Nadya about projects assembling tiny pieces. It's not worth the time!</p>
+                            <img src="/hcde533/images/BrokenPieces.png" alt="broken laser cut acrlyic pieces" width="250">
+                        <h3>Final Lamp</h3>
+                            <p>This is my final lamp! I think it has a funky 1970s vibe, but mostly as a decoration. Not so much as a functional lamp.</p>
+                            <img src="/hcde533/images/FinalLamp.png" alt="3d printed and laser cut lamp design" width="400">
+                            <p>I did buy <a href="https://www.amazon.com/Govee-Bluetooth-Changing-Control-Bedroom/dp/B07CL2RMR7/ref=sr_1_4?crid=1CCQUVKKIHEFM&keywords=color+changing+bulb&qid=1668537367&s=books&sprefix=color+changing+bulb%2Cstripbooks%2C232&sr=1-4-catcorr">this color changing bulb</a> from Amazon. But, at normal brightness, the lamp is harsh to look at because you can see the bulb through the chains. Nadya mentioned this in class, and I didn't follow her advice.</p>
+                            <img src="/hcde533/images/FinalLampLit.png" alt="3d printed and laser cut lit lamp" width="400">
+                            <p>I tried to tape drawing paper over it to reduce the brightness, which was okay, but it wasn't the best (by that I mean it was ugly).</p>
+                            <img src="/hcde533/images/PaperTest.png" alt="lamp with paper to reduce brightness" width="300">
+                            <p>So, I decided to employ my lightbulb's bluetooth color-changing capabilities! With brightness reduced, it's much better to look at. Also, the colors have some nice-ish (emphasis on the "ish") looking effects with the fluorescent acrylic. See below!</p>
+                            <img src="/hcde533/images/ColorLamp.png" alt="lamp with blue bulb" width="400">
+                            <br>
+                            <img src="/hcde533/images/LampColor1.gif" alt="lamp with color-changing bulb" width="400">
+                            <p>For higher quality click <a href="https://drive.google.com/file/d/1TDxiQdWiw6CE4WlLXXKFdGFIxdKYcUVH/view?usp=share_link">here</a>.</p>
+                            <br>
+                            <img src="/hcde533/images/LampColor2.gif" alt="lamp with color-changing bulb" width="400">
+                            <p>For higher quality click <a href="https://drive.google.com/file/d/1oDxAgAKq8jWzRQP5KTPPRKZWbgr4O4oG/view?usp=share_link">here</a>.</p>
+                        <h3>Final Thoughts</h3>
+                            <p>I'm definitely bummed out that this didn't end up being a cooler lamp design, especially considering how much time and money I spent on it. I was really convinced it would look very cool. Even if the bulb weren't exposed, I don't think it would look significantly better. Also, there is so much wasted material for this assignment and design. Oh well!</p>
+                    <h2>Mold Design</h2>
+                        <h3>Rhino Model</h3>
+                            <p>I made a simple, balloon-like mold-for-molds model in Rhino using revolve, boolean union, and boolean split commands. I also used spheres for keys. This was the easy part for me!</p>
+                            <img src="/hcde533/images/MFMDesign.png" alt="Rhino model of mold-for-molds" width="650">
+                        <h3>3D Printing My Mold for Molds</h3>
+                            <p>I actually stopped my first print mid-print to add a vent hole, which was a mistake. Anyway, I printed both sides during the same print using Noelle's slicing settings that she sent in Discord. It took about six hours to print.</p>
+                            <img src="/hcde533/images/MFMPrinted1.png" alt="3D printed mold-for-molds" width="400">
+                            <br>
+                            <img src="/hcde533/images/MFMPrinted2.png" alt="3D printed mold-for-molds" width="400">
+                        <h3>Silicone Mixing & Pouring</h3>
+                            <p>I bought small, disposable measuring cups at TAP Plastics for mixing. But, I didn't have cups large enough for one side of my mold. So, I used a clean Venti Starbucks cup and poured about 80mL of part A and part B of the Ooommoo silicone into the Starbucks cup and mixed them together with a plastic utensil. Lesson learned about being prepared with proper materials. I poured almost the entire amount into one size of the mold (160 mL of the mixture), and repeated this process for the second side of the mold.</p>
+                        <h3>Final Mold</h3>
+                            <p>I let my mold cure for over 10 hours because I was out of my home. It was a bit difficult to get out of the 3D printed mold-for-molds, but I was able to do so by prying it out with a cheese knife.</p>
+                            <img src="/hcde533/images/mold.png" alt="oommoo silicone mold" width="400">
+                            <p>There are a few issues with my Oommoo mold. (1) The two flat surfaces don't mate perfectly. That could be a result of the flat part of my mold-for-molds not printing well. (2) The part of the sprue that enters the cavity is too narrow. (3) The vent hole is unnecessary, and the plaster will come out through there.</p>
+                            <img src="/hcde533/images/MoldIssues.png" alt="oommoo silicone mold with mating issues" width="350">
+                            <p>I didn't have time this week to do multiple iterations to solve these issues. Junchao told me I can tape my mold together and still use it, so I may try that anyway before making a new mold-for-molds and silicone mold this week.</p>
+                        <h3>To Do</h3>
+                        <p>So, I do want to test my current mold to see if I can avoid remaking it, but I have a few things to do:
+                            <ul>
+                                <li>Cut a entrance hole where the sprue meets the largest cylinder shape</li>
+                                <li>Tape or fill in the unnecessary vent hole</li>
+                                <li>Tape my mold closed and test it with plaster</li>
+                                <li>If I'm redesigning the mold-for-molds, fix the sprue, vent, and 3D printer settings</li>
+                                <li>Cast 4 plaster objects</li>
+                            </ul>
+                        </p>
+                    <h2>Reflection</h2>
+                        <p>If I could do both parts of this assignment all over again, I absolutely would. The lamp design was so unsatisfactory and took way too much time. But, hindsight is 20/20. Also, in general, I’m always so strapped for time, and it's really hard for me to test multiple iterations. It hasn't been making for the best digital fabrication process. So, I would love the opportunity to redo some of these things when I'm not working to meet a deadline.</p>
+                    <h2>Source Files</h2>   
+                        <p>If there is an issue accessing these files, please see:
+                            <a href="https://drive.google.com/drive/folders/1PyJDR5XpwPuuX_x5F_OhixdCZIDJBoc9?usp=sharing">Google Drive folder</a>
+                                <br>
+                            <a href="/assignment6/A6 Alexa Schlein Lamp.zip">A6 Lamp Files</a>
+                                <br>
+                            <a href="/assignment6/A6 Alexa Schlein Mold.zip">A6 Mold-for-Molds Files</a>
+                                <br>
+                        </p>
+                    <h2>Final Kudos</h2>
+                        <p>Thanks to my HCDE 536 classmate who helped me with peeling! Thank you to Junchao for answering questions about fits and molds! I also used the slicer settings Noelle sent in Discord - thank you Noelle!</p>
+                        <h2><a href="index.html">Return to Main Page</a></h2>
+                </div>
+                <div class="return">
+                    <a href="index.html">Return to Main Page</a>
+                </div>
+
+            </div>
+        </main>
+    </body>
+</html>
