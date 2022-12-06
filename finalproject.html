@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+        <title>Alexa Schlein's HCDE 533 Digital Fabrication Page!</title>
+
+        <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    </head>
+    <body>
+        <main>
+            <div class="main">
+                <div class="header">
+                    <h1>Final Project</h1>
+                    <p> by Alexa Schlein for HCDE 533, December 2022</p>
+                </div>
+                <div class="project">
+                    <h2>Bees, Flowers, and Honeycomb Jewelry Set</h2>
+                    <img src="/hcde533/images/FinalProject.png" alt="project consisting of dish, necklace, earrings, and rings" width="700">
+                        <h3>Concept</h3>
+                            <p>My final project focuses on a bee- and honeycomb-themed jewelry set with a matching jewelry dish. In the spirit of limiting plastic waste, I used leftover acrylic laser cut flowers from my lamp project. Here's what I made!</p>
+                            <p>I created:
+                                <ul>
+                                    <li>A pair of 3D printed + laser cut acrylic honeycomb earrings</li>
+                                    <li>A necklace made with a 3D printed bee + laser cut acrylic flowers</li>
+                                    <li>3D printed honeycomb rings</li>
+                                    <li>A 3D printed + laser cut acrylic honeycomb jewelry dish</li>
+                                </ul>
+                            </p>
+                            <img src="/hcde533/images/FinalSet1.png" alt="project consisting of dish, necklace, earrings, and rings" width="700">
+                        <h3>Techniques</h3>
+                            <p>I used the following techniques in my project:
+                                <ul>
+                                    <li>Rhino (modeling and light mesh editing)</li>
+                                    <li>Grasshopper</li>
+                                    <li>3D printing</li>
+                                    <li>Laser cutting</li>
+                                    <li>Incorporating stock parts</li>
+                                </ul>
+                            </p>
+                    <h2>Bee & Flower Necklace</h2>
+                        <h3>Design</h3>
+                            <p>I used the leftover acrylic laser cutter flowers from my lamp assignment. Please see <a href="assignment6.html">this page</a> for more details about how these pieces were designed and cut.</p>
+                            <img src="/hcde533/images/LaserCutPieces.png" alt="laser cut acrylic flowers" width="400">
+                            <p>I based my bee design on <a href="https://www.etsy.com/listing/766878072/bee-straw-topper-stl-download-for-3d?click_key=e247f8318d07a0727c374f86896fc4996034fead%3A766878072&click_sum=cd674e15&ref=hp_rv-1">this bee straw topper</a> that I found on Etsy. I purchased the STL file and imported it into Rhino (mostly because I thought it would be faster and cleaner than designing my own bee). Because I wanted to make some changes (and this STL is for a topper, rather than the piece I need), I then took a screenshot of the STL in Rhino, pasted it into Illustrator, and built my own bee curves by tracing the picture. I imported those curves from Illustrator into Rhino and made additional curves and modifications to create the shape I wanted. I added hooks to the bee for attaching jump rings, but I decided to not use a necklace chain, and used my leftover acrylic chain pieces instead.</p>
+                            <img src="/hcde533/images/BeeModel.png" alt="bee designed in Rhino" width="400">
+                        <h3>3D Printing</h3>
+                            <p>I 3D printed the honeycomb pieces with the following slicer settings:
+                                <ul>
+                                    <li>Standard quality</li>
+                                    <li>75% infill</li>
+                                    <li>200 degrees F print temperature</li>
+                                    <li>0.2mm layer height</li>
+                                </ul>
+                            </p>
+                        <h3>Finishing & Assembly</h3>
+                            <p>I lightly sanded the bee with 320 grit sandpaper, and painted it using the metallic strawberry acrylic paint from my paint set. Originally, I was going to hook the bee to acrylic pieces and a necklace chain with jump rings, which is why I added the hooks. But, the necklace chains I bought didn't look right with the acrylic, so I used more leftover chain pieces to create a necklace chain. The "pendant" portion is made with acrylic flowers attached to the bee. I thought about adding some honeycomb pieces but... less is more, I think. Overall, it looks okay. I think it was a decent execution of an okay idea, haha.</p>
+                            <img src="/hcde533/images/FinalNecklace.png" alt="bee and acrylic necklace" width="400">
+                            <br>
+                            <img src="/hcde533/images/NecklaceOnMe.png" alt="bee and acrylic necklace on me" width="400">
+                    <h2>Honeycomb Earrings</h2>
+                        <h3>Design</h3>
+                            <p>I first created a basic honeycomb curve in Grasshopper following <a href="https://www.youtube.com/watch?v=Oy_HHxrU_X8">this tutorial</a>. I baked that curve into Rhino and deleted honeycomb hexagon pieces to create a general shape I liked. Then, I added a hook curve, and extruded the curve to create a 3D honeycomb model for printing. I also exported the honeycomb curve to Adobe Illustrator to cut and engrave acrylic.</p>
+                        <h3>Creating a Honeycomb with Grasshopper</h3>
+                            <p>I used a hexagonal component to create a honeycomb wall shape, and created a scaled version where each scaled honeycomb piece is centered into the larger piece. See below:</p>
+                            <img src="/hcde533/images/GHHoneycomb.png" alt="Grasshopper definition for honeycomb" width="500">
+                        <h3>3D Models in Rhino</h3>
+                            <p>The honeycomb pieces are 3.175mm (0.125in) thick (I baked the curve and extruded it in Rhino).</p>
+                            <img src="/hcde533/images/RhinoEarring.png" alt="Earring design in Rhino" width="400">
+                        <h3>3D Printing</h3>
+                            <p>I printed the honeycomb pieces with the following slicer settings:
+                                <ul>
+                                    <li>Standard quality</li>
+                                    <li>75% infill</li>
+                                    <li>0.2mm layer height</li>
+                                </ul>
+                            </p>
+                            <p>I just flipped the STL around in Cura for the opposite side.</p>
+                            <img src="/hcde533/images/3DPrintedHoneycomb.png" alt="3d printed honeycomb earring components" width="400">
+                        <h3>Laser Cutting</h3>
+                            <p>Using my leftover fluorescent yellow acrylic from the lamp project, I laser cut and engraved a honeycomb shape using the cell cast acrylic material settings for laser cutter #2 in the 8 makerspace. The engraved honeycomb is slightly smaller in scale than the 3D printed honeycomb. Unfortunately, I had some issues with aligning the laser cutter, so I had to do multiple cuts. I also had to sand my pieces after cutting because they didn't cut cleanly through. For next time, I'd advise tinkering power settings to get a clean cut.</p>
+                            <img src="/hcde533/images/LaserCutHoneycomb.png" alt="3d printed and laser cut honeycomb components" width="400">
+                        <h3>Finishing & Assembly</h3>
+                            <p>First, I lightly sanded the 3D printed honeycomb and then painted it with metallic gold acrylic paint. Then, I sanded the laser cut honeycomb and superglued them to the 3D printed honeycomb. I then attached a earring hook and jump ring to the earring.</p>
+                            <img src="/hcde533/images/Painting.png" alt="gold painted 3D printed honeycomb earring components" width="400">
+                            <br>
+                            <img src="/hcde533/images/EarringsFinal.png" alt="honeycomb earrings" width="400">
+                            <br>
+                            <img src="/hcde533/images/EarringOnMe.png" alt="honeycomb earring in ear" width="400">
+                    <h2>Honeycomb Rings</h2>
+                        <h3>Design</h3>
+                            <p>So, I actually designed a few different rings because I had the wrong honeycomb orientation! Regardless, my ring design was built in Grasshopper and 3D printed. The rings fit my fingers.</p>
+                        <h3>Creating a Honeycomb with Grasshopper</h3>
+                            <p>The ring was designed using a combination of the honeycomb earring Grasshopper components + the Grasshopper flow command I used to build my lamp base for the lamp assignment. I'll outline the portions below:</p>
+                            <img src="/hcde533/images/RingGrasshopper.png" alt="Grasshopper definition for honeycomb ring" width="900">
+                            <p>Step 1: Create a honeycomb curve structure.</p>
+                            <img src="/hcde533/images/Step1Ring.png" alt="Step 1 of Grasshopper definition for honeycomb ring" width="500">
+                            <p>Step 2: Create a scaled version of that honeycomb curve structure, where each smaller honeycomb hexagon is centered within the larger honeycomb hexagon.</p>
+                            <img src="/hcde533/images/Step2Ring.png" alt="Step 2 of Grasshopper definition for honeycomb ring" width="500">
+                            <p>Step 3: Extrude the honeycomb structure.</p>
+                            <img src="/hcde533/images/Step3Ring.png" alt="Step 3 of Grasshopper definition for honeycomb ring" width="500">
+                            <p>Step 4: Flow the honeycomb structure onto a circle set to the ring diameter.</p>
+                            <img src="/hcde533/images/Step4Ring.png" alt="Step 4 of Grasshopper definition for honeycomb ring" width="500">
+                            <p>NOTE: For some reason, unless I had the number of honeycomb set very high, the honeycomb hexagons would stretch. So, you do have to delete leftover pieces. I'm sure there's something I could be doing better here, but this works for now.</p>
+                            <img src="/hcde533/images/GHBake.png" alt="Rhino model showing green demo from Grasshopper" width="300">
+                            <p>I actually designed 2 rings because I made a mistake with the first design (incorrect honeycomb orientation). See below! I did this by simply flipping the x and y values in the hexagon component in my Grasshopper definition.</p>
+                        <h3>3D Modeling in Rhino</h3>
+                            <p>For design 1 (incorrect honeycomb orientation), I baked the ring into Rhino from Grasshopper and deleted the leftover pieces. For design 2 (correct honeycomb orientation), I baked the ring into Rhino, and then removed a portion of the top and bottom layers with the BooleanDifference command. I discovered this was necessary after having issues printing this design (the thickness of the flat part of the hexagon was too thin to print well).</p>
+                            <img src="/hcde533/images/RingDesigns.png" alt="Honeycomb rings designed in Rhino" width="550">
+                            <p>The rings are open because of the deleted pieces from the Flow command</p>
+                            <img src="/hcde533/images/OpenRing.png" alt="Honeycomb ring designed in Grasshopper showing side view" width="300">
+                        <h3>3D Printing</h3>
+                           <p>Several of my initial prints failed due to design flaws and slicer settings.</p>
+                           <img src="/hcde533/images/FailedRings.png" alt="failed 3D printed honeycomb rings" width="400">
+                            <p>I had to do several iterations to figure out the right printing settings because I had problems with adhesion and general quality. If you do print from one of my STL files, I would recommend testing temperatures, speeds, infills, and top/bottom layer heights to find what works best for you. In general though, my slicer settings were about this:
+                                <ul>
+                                    <li>Super quality</li>
+                                    <li>75% infill</li>
+                                    <li>195 degrees F print temperature</li>
+                                    <li>0.12mm layer height</li>
+                                    <li>0.20mm/s speed</li>
+                                    <li>Raft for adhesion</li>
+                                </ul>
+                            </p>
+                        <h3>Finishing & Assembly</h3>
+                            <p>I did some light sanding, but honestly didn't have time to perfect it, so mostly I just made sure I cleared away any bumps or pieces sticking out. I painted some of the rings with acrylic paints!</p>
+                            <img src="/hcde533/images/FinalRings.png" alt="3D printed and painted honeycomb rings" width="400">
+                            <br>
+                            <img src="/hcde533/images/RingsOnMe.png" alt="3D printed and painted honeycomb rings on a hand" width="400">
+                    <h2>Jewelry Dish</h2>
+                        <h3>Design</h3>
+                            <p>I designed the bottom of my jewelry dish to be laser cut and assembled with super glue and a chicago screw. The dish bottom contains some of my leftover laser cut flowers. This dish bottom is designed to be glue to a honeycomb structure jewelry dish base.</p>
+                            <img src="/hcde533/images/AssembledDishBottom.png" alt="acrylic jewelry dish bottom" width="400">
+                        <h3>Grasshopper</h3>
+                            <p>I used the same Grasshopper definition that I used for the honeycomb rings. But, I used the dish diameter instead of the ring size for the flow command. I also increased the width and thickness. In general, though, the code is similar!</p>
+                        <h3>3D Modeling in Rhino - Dish Base</h3>
+                            <p>The bottom of the base is a revolved L-shape. The middle of it is open to save material, and also allow room for the bottom of the Chicago screw. Once I baked the honeycomb structure into Rhino, I joined the honeycomb to the revolved portion. Similar to the honeycomb rings, I made multiple designs with different amounts of honeycomb and orientations.</p>
+                            <img src="/hcde533/images/DishBases.png" alt="base for jewelry dish designed in Rhino" width="500">
+                        <h3>3D Printing</h3>
+                            <p>I 3D printed the honeycomb dish bases with the following slicer settings:
+                                <ul>
+                                    <li>Standard quality</li>
+                                    <li>25% infill</li>
+                                    <li>0.12mm layer height</li>
+                                    <li>0.40mm/s speed</li>
+                                    <li>200 degrees F print temperature</li>
+                                    <li>Brim for adhesion</li>
+                                </ul>
+                        <h3>3D Modeling - Dish Bottom</h3>
+                            <p>I designed the acrylic circles for the dish bottom in Rhino. They're 100mm in diameter and fit the Chicago screws I purchased.</p>
+                            <img src="/hcde533/images/DishCircles.png" alt="designs for acrylic cut circles for jewelry dish bottom" width="400">
+                        <h3>Laser Cutting</h3>
+                            <p>I used the settings for cell cast acrylic in the materials database for laser cutter #2 in the 8. As I described previously, the flower pieces came from my lamp assignment.</p>
+                            <img src="/hcde533/images/DishCirclesLaserCut.png" alt="acrylic laser cut circles" width="400">
+                        <h3>Finishing & Assembly</h3>
+                            <p>I ended up not needing the smallest circle for the screw size I used. I super glued the white acrylic circle to the clear acrylic circle (O-shaped). I then placed laser cut acrylic flowers (from my lamp project) inside this. Then, I placed a clear acrylic circle on top and secured these pieces together with a Chicago screw. I used a Chicago screw (leather screw) because it allows motion and doesn't require threads.</p>
+                            <img src="/hcde533/images/AssembledDishBottom.png" alt="acrylic lsser cut assembly" width="400">
+                            <p>Again, I did minimal sanding with sandpaper, just to remove pieces sticking out and to smooth sharp edges. I painted the accurate honeycomb dish base with a few metallic acrylic paints. I don't like the result though, so I haven't glued the laser cut bottom to any of the bases. I think I'm going to print a new one, leave it white, and finally glue the dish base to the dish bottom with super glue.</p>
+                            <img src="/hcde533/images/JDish1.png" alt="jewelry dish with white base" width="400">
+                            <br>
+                            <img src="/hcde533/images/JDish2.png" alt="jewelry dish with painted base" width="400">
+                    <h2>Deviations</h2>
+                        <p>Luckily, I managed to complete most everything that I had planned. But, I had to make the following changes to my original proposal:
+                            <ul>
+                                <li>Change in necklace chain (personal preference)</li>
+                                <li>Minimal sanding (I ran out of time for my preferred finish)</li>
+                                <li>No rendering (I ran out of time)</li>
+                            </ul>
+                        </p>
+                    <h2>Bill of Materials</h2>
+                        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyImHYNQ_YBmjkcgNPn_yQg86dNxNdfkAGFlFHplQIvtPuaedkEAHup0BpkuJrPj3aRJMg5yNi4nkA/pubhtml?gid=568097139&amp;single=true&amp;widget=true&amp;headers=false" height="600" width="900"></iframe>
+                        <p>Please see <a href="https://docs.google.com/spreadsheets/d/1qUAik_ejNh0EHrExP5uqtrz4PaEIwjvS1nuDvR585mk/edit#gid=568097139">Final BOM</a> spreadsheet.</p>
+                    <h2>Source Files</h2>
+                        <p>
+                            <ul>
+                                <li><a href="/finalproject/Bee Files.zip">Bee Files</a></li>
+                                <li><a href="/finalproject/Flower Files.zip">Flower files</a></li>
+                                <li><a href="/finalproject/Earring Files.zip">Earring files</a></li>
+                                <li><a href="/finalproject/Ring Files.zip">Ring files</a></li>
+                                <li><a href="/finalproject/Jewelry Dish Files.zip">Jewelry Dish files</a></li>
+                                <li><a href="/finalproject/BOM Final.xlsx">BOM</a></li>
+                            </ul>
+                        </p>
+                        <p>If there is an issue accessing these files, please see:
+                            <a href="https://drive.google.com/drive/folders/1PyJDR5XpwPuuX_x5F_OhixdCZIDJBoc9?usp=sharing">Google Drive folder</a>
+                        </p>
+                    <h2>Reference Files</h2>
+                        <p>
+                            <ul>
+                                <li><a href="https://www.youtube.com/watch?v=Oy_HHxrU_X8">Honeycomb tutorial</a></li>
+                                <li><a href="https://www.etsy.com/listing/766878072/bee-straw-topper-stl-download-for-3d?click_key=e247f8318d07a0727c374f86896fc4996034fead%3A766878072&click_sum=cd674e15&ref=hp_rv-1">Bee Straw Topper on Etsy</a></li>
+                            </ul>
+                        </p>
+                    <h2>Final Kudos</h2>
+                        <p>Thanks to Nadya and Junchao for answering questions in Discord and in office hours!</p>
+                    <h2><a href="index.html">Return to Main Page</a></h2>
+                </div>
+                <div class="return">
+                    <a href="index.html">Return to Main Page</a>
+                </div>
+
+            </div>
+        </main>
+    </body>
+</html>
